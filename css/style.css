@@ -1,0 +1,546 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, "Noto Sans Thai", sans-serif;
+    background: #f4f8fc;
+    color: #1f2937;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 35px;
+    border: 1px solid #e3edf7;
+    box-shadow: 0 12px 35px rgba(36, 105, 160, 0.10);
+}
+
+.logo {
+    display: block;
+    width: 120px;
+    max-width: 40%;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+h1 {
+    color: #1769aa;
+    text-align: center;
+    margin: 10px 0 15px;
+    font-size: 30px;
+    line-height: 1.4;
+}
+
+h2 {
+    color: #1769aa;
+}
+
+p {
+    text-align: center;
+    line-height: 1.7;
+    color: #64748b;
+    font-size: 15px;
+}
+
+label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 5px;
+    background: #ffffff;
+    border: 1px solid #d5dce5;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #1769aa;
+    box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.12);
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin: 30px auto 25px;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 12px;
+    background: #1769aa;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(23, 105, 170, 0.2);
+}
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, #2f80ed, #56ccf2);
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(86, 204, 242, 0.08);
+    top: -80px;
+    right: -70px;
+    pointer-events: none;
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 5px;
+}
+
+.form-group {
+    min-width: 0;
+}
+
+.form-group label {
+    margin-top: 18px;
+}
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+.privacy-note {
+    margin: 0;
+    font-size: 12px;
+    color: #94a3b8;
+    text-align: center;
+}
+/* ========================================
+   QUIZ PAGE - MODERN UI
+   ======================================== */
+
+/* การ์ดแบบสอบถาม */
+.quiz-card {
+    max-width: 760px;
+    margin: 40px auto;
+    padding: 36px 42px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 28px;
+    box-shadow: 0 15px 45px rgba(30, 100, 160, 0.12);
+    border: 1px solid rgba(30, 120, 180, 0.08);
+}
+
+/* ส่วนหัว */
+.quiz-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* โลโก้ */
+.quiz-header .logo {
+    width: 85px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* ข้อที่ */
+.progress-text {
+    font-size: 15px;
+    font-weight: 600;
+    color: #39729b;
+    margin-bottom: 10px;
+}
+
+/* แถบ Progress */
+.progress-bar {
+    width: 100%;
+    height: 9px;
+    background: #e8f1f7;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* ส่วนที่แสดงความคืบหน้า */
+.progress-fill {
+    width: 5%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        #2587d8,
+        #43b7c8
+    );
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+
+/* ========================================
+   CATEGORY
+   ======================================== */
+
+.category {
+    display: inline-block;
+    padding: 9px 18px;
+    margin: 18px 0 18px;
+    background: #eaf6ff;
+    color: #2473a8;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   QUESTION
+   ======================================== */
+
+.question-box {
+    margin-bottom: 24px;
+}
+
+.question-box h2 {
+    margin: 0 0 12px;
+    font-size: 27px;
+    line-height: 1.55;
+    color: #24577c;
+    font-weight: 700;
+}
+
+.question-hint {
+    margin: 0;
+    font-size: 15px;
+    color: #777;
+}
+
+
+/* ========================================
+   ANSWER OPTIONS
+   ======================================== */
+
+#options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.option {
+    width: 100%;
+    min-height: 72px;
+    padding: 16px 20px;
+
+    background: #ffffff;
+    border: 2px solid #e1edf4;
+    border-radius: 18px;
+
+    color: #315b73;
+    font-size: 17px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* ตอนเอาเมาส์วาง */
+.option:hover {
+    transform: translateY(-2px);
+    border-color: #42a5dc;
+    background: #f5fbff;
+    box-shadow: 0 7px 18px rgba(40, 140, 200, 0.12);
+}
+
+/* ตอนเลือกคำตอบ */
+.option.selected,
+.option.active {
+    background: #eaf7ff;
+    border-color: #2587d8;
+    color: #17679c;
+    box-shadow: 0 6px 18px rgba(37, 135, 216, 0.15);
+}
+
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+.quiz-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.quiz-buttons button {
+    min-width: 150px;
+    min-height: 50px;
+    padding: 12px 24px;
+
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* ปุ่มก่อนหน้า */
+.btn-secondary {
+    background: #f2f7fa;
+    color: #477086;
+    border: 1px solid #dce9ef;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    background: #eaf3f8;
+}
+
+/* ปุ่มถัดไป */
+.btn-primary {
+    background: linear-gradient(
+        135deg,
+        #2187d4,
+        #299ecb
+    );
+    color: white;
+    border: none;
+
+    box-shadow: 0 7px 18px rgba(33, 135, 212, 0.22);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(33, 135, 212, 0.28);
+}
+
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    .quiz-card {
+        margin: 15px;
+        padding: 25px 20px;
+        border-radius: 22px;
+    }
+
+    .quiz-header .logo {
+        width: 70px;
+    }
+
+    .question-box h2 {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+
+    #options {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .option {
+        min-height: 62px;
+        font-size: 16px;
+    }
+
+    .quiz-buttons {
+        flex-direction: row;
+    }
+
+    .quiz-buttons button {
+        min-width: 0;
+        flex: 1;
+        padding: 11px 12px;
+        font-size: 15px;
+    }
+}
+/* =========================
+   RESULT PAGE
+========================= */
+
+.result-card {
+    max-width: 760px;
+    margin: 40px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 28px;
+    box-shadow: 0 15px 45px rgba(30, 100, 160, 0.12);
+}
+
+.result-card h1 {
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.result-intro {
+    color: #6b7f8d;
+    margin-bottom: 30px;
+}
+
+.customer-summary {
+    background: #f5faff;
+    border-radius: 20px;
+    padding: 22px;
+    margin-bottom: 28px;
+    border: 1px solid #e3f0f7;
+}
+
+.customer-summary h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.customer-summary p {
+    text-align: left;
+    margin: 10px 0;
+    color: #496574;
+}
+
+.customer-summary strong {
+    color: #24577c;
+}
+
+.bmi-note {
+    font-size: 13px;
+    color: #888;
+    text-align: left;
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+.result-section {
+    margin-top: 30px;
+}
+
+.result-section h2 {
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.score-item {
+    margin-bottom: 18px;
+}
+
+.score-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #315b73;
+    margin-bottom: 7px;
+}
+
+.score-bar {
+    width: 100%;
+    height: 12px;
+    background: #eaf1f5;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.score-fill {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #2587d8, #43b7c8);
+    border-radius: 20px;
+    transition: width 0.8s ease;
+}
+
+.score-percent {
+    text-align: right;
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2473a8;
+}
+
+#mainResult {
+    background: #f0f9ff;
+    border-left: 4px solid #2587d8;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: left;
+    line-height: 1.7;
+    color: #315b73;
+}
+
+.result-note {
+    margin-top: 30px;
+    padding: 18px;
+    background: #fafafa;
+    border-radius: 16px;
+    color: #777;
+}
+
+.result-note strong {
+    color: #555;
+}
+
+.result-note p {
+    text-align: left;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+#backButton {
+    margin-top: 30px;
+}
+
+/* มือถือ */
+@media (max-width: 600px) {
+
+    .result-card {
+        margin: 20px auto;
+        padding: 25px 20px;
+        border-radius: 22px;
+    }
+
+    .result-card h1 {
+        font-size: 25px;
+    }
+
+    .customer-summary {
+        padding: 18px;
+    }
+
+    .result-section h2 {
+        font-size: 19px;
+    }
+}

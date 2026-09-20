@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>เช็กความคุ้มครองที่เหมาะกับคุณ</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <img src="assets/logo.png" alt="โลโก้" class="logo">
+
+            <h1>เช็กความคุ้มครองที่เหมาะกับคุณ</h1>
+
+            <p>
+                แบบสำรวจสั้น ๆ เพื่อช่วยให้คุณเห็นภาพ
+                ความคุ้มครองที่ควรให้ความสำคัญ
+            </p>
+
+            <p>ใช้เวลาประมาณ 3–5 นาที</p>
+
+         <h2>ข้อมูลเบื้องต้น</h2>
+
+<label>ชื่อ-นามสกุล</label>
+<input type="text" id="name" placeholder="กรุณากรอกชื่อ-นามสกุล">
+
+<div class="form-row">
+
+    <div class="form-group">
+        <label>อายุ (ปี)</label>
+        <input type="number" id="age" placeholder="เช่น 30">
+    </div>
+
+    <div class="form-group">
+        <label>น้ำหนัก (กก.)</label>
+        <input type="number" id="weight" placeholder="เช่น 60">
+    </div>
+
+</div>
+
+<div class="form-row">
+
+    <div class="form-group">
+        <label>ส่วนสูง (ซม.)</label>
+        <input type="number" id="height" placeholder="เช่น 165">
+    </div>
+
+    <div class="form-group">
+        <label>เบอร์โทรศัพท์</label>
+        <input type="tel" id="phone" placeholder="เช่น 081-234-5678">
+    </div>
+
+</div>
+
+<button id="startButton">
+    เริ่มสำรวจ →
+</button>
+
+<p class="privacy-note">
+    🔒 ข้อมูลของคุณจะถูกเก็บเป็นความลับ
+</p>
+
+           </div>
+
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/app.js"></script>
+
+<script>
+    document.getElementById("startButton").addEventListener("click", function () {
+
+        const name = document.getElementById("name").value.trim();
+        const age = document.getElementById("age").value;
+        const weight = document.getElementById("weight").value;
+        const height = document.getElementById("height").value;
+        const phone = document.getElementById("phone").value.trim();
+
+        if (!name || !age || !weight || !height || !phone) {
+            alert("กรุณากรอกข้อมูลให้ครบทุกช่องค่ะ");
+            return;
+        }
+
+        localStorage.setItem("surveyName", name);
+        localStorage.setItem("surveyAge", age);
+        localStorage.setItem("surveyWeight", weight);
+        localStorage.setItem("surveyHeight", height);
+        localStorage.setItem("surveyPhone", phone);
+
+        window.location.href = "quiz.html";
+    });
+</script>
+
+</body>
+
+</html>
