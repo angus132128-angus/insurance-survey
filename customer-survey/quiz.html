@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>แบบสำรวจความคุ้มครอง</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card quiz-card">
+
+            <!-- ส่วนหัว -->
+
+            <div class="quiz-header">
+
+                <img src="assets/logo.png"
+                     alt="โลโก้"
+                     class="logo">
+
+                <div class="progress-text">
+                    ข้อที่ <span id="currentQuestion">1</span> / 20
+                </div>
+
+                <div class="progress-bar">
+
+                    <div class="progress-fill"
+                         id="progressFill">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- หมวดคำถาม -->
+
+            <div class="category">
+
+                หมวดที่ 1 : สวัสดิการและความคุ้มครองปัจจุบัน
+
+            </div>
+
+
+            <!-- คำถาม -->
+
+            <div class="question-box">
+
+                <h2 id="questionText">
+
+                    ปัจจุบันคุณมีสวัสดิการหรือความคุ้มครองอะไรอยู่บ้าง?
+
+                </h2>
+
+                <p class="question-hint">
+
+                    เลือกคำตอบที่ตรงกับคุณมากที่สุด
+
+                </p>
+
+            </div>
+
+
+            <!-- ตัวเลือก -->
+
+            <div id="options">
+
+                <button class="option">
+                    ข้าราชการ
+                </button>
+
+                <button class="option">
+                    ประกันสังคม
+                </button>
+
+                <button class="option">
+                    มีประกันส่วนตัว
+                </button>
+
+                <button class="option">
+                    ยังไม่มี
+                </button>
+
+            </div>
+
+
+            <!-- ปุ่ม -->
+
+            <div class="quiz-buttons">
+
+                <button
+                    type="button"
+                    class="btn-secondary"
+                    id="prevButton">
+
+                    ← ก่อนหน้า
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="btn-primary"
+                    id="nextButton">
+
+                    ถัดไป →
+
+                </button>
+
+              </div>
+
+    </div>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
